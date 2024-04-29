@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import './regform.css'
 const Form = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -24,34 +25,37 @@ const Form = () => {
   }
 
   return (
+    <div class="login-page">
+    <div class="form">
+   REGISTER AN ACCOUNT
     <form onSubmit={handleSubmit}>
       <label>
-        Username:
         <input
           type="text"
           value={username}
+          placeholder="username"
           onChange={(e) => setUsername(e.target.value)}
         />
       </label>
       <br />
       <label>
-        Password:
         <input
           type="password"
           value={password}
+          placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
       </label>
       <label>
-        E-mail:
         <input
           type="String"
           value={email}
+          placeholder="email address"
           onChange={(e) => setEmail(e.target.value)}
         />
       </label>
       <label>
-        Are you a Buyer:
+        Are you a Buyer?
         <input
           type="checkbox"
           value={isBuyer}
@@ -59,7 +63,7 @@ const Form = () => {
         />
       </label>
       <label>
-        Are you a seller:
+        Are you a seller?
         <input
           type="checkbox"
           value={isSeller}
@@ -69,6 +73,8 @@ const Form = () => {
       <br/>
       <button type = 'submit'>Submit</button>
     </form>
+    </div>
+    </div>
   );
 };
 
