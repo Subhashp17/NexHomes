@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './regform.css'
+
 const Form = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -37,29 +39,34 @@ const Form = () => {
   };
 
   return (
+    <div class="login-page">
+    <div class="form">
+   LOG IN
     <form onSubmit={handleSubmit}>
       <label>
-        Username:
         <input
           type="text"
           value={username}
+          placeholder="username"
           onChange={(e) => setUsername(e.target.value)}
         />
       </label>
       <br />
       <label>
-        Password:
         <input
           type="password"
           value={password}
+          placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
       </label>
       <br />
       <br />
-      <Link to="/register">Register Here!</Link>
+      <p class="message">Not registered? <Link to="/register">Create an account</Link></p>
       <button type="submit">Submit</button>
     </form>
+    </div>
+    </div>
   );
 };
 
