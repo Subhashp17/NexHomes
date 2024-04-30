@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import './dashboardtiles.css'
+
 const Dashboard = () => {
   const [data, setData] = useState(null);
 
@@ -25,6 +27,8 @@ const Dashboard = () => {
   }, []);
 
   return (
+    <div class="grid">
+      <div class="tile">
     <div>
     <Link to="/addproperty">Add property Here</Link>
     {data && data.map((item, index) => (
@@ -34,6 +38,8 @@ const Dashboard = () => {
         <p>{item.description}</p>
       </div>
     ))}
+  </div>
+  </div>
   </div>
   );
 };

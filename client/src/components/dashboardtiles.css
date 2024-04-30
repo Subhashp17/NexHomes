@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100%;
+    font-family: "Inter", "Helvetica", "Arial", sans-serif;
+    color: #1c1917;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  
+  .good-sans {
+    font-family: "GoodSans-Regular", "Inter", sans-serif;
+  }
+  
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1 {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .grid {
+    width: 100%;
+    max-width: 832px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+  
+  .tile {
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+  }
+  .tile:hover {
+    box-shadow: 4px 4px 0px #e1dcd5;
+    transform: translateY(-4px);
+  }
+  .tile:active {
+    box-shadow: none;
+  }
+  
+  .tile-top {
+    padding: 24px;
+    gap: 24px;
+    position: relative;
+  }
+  .tile-top img {
+    width: 56px;
+    height: 56px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .tile-top .badge {
+    width: 88px;
+    height: 36px;
+    background: #f8f5f2;
+    border-radius: 18px;
+  }
+  .tile-top:hover {
+    cursor: pointer;
+  }
+  .tile-top:hover h1 {
+    text-decoration: underline;
+  }
+  .tile-top:hover .badge {
+    background: #f3eee8;
+  }
+  .tile-top .status {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 24px;
+    right: 24px;
+    background: #5daf91;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 #d1e8e0;
+    transform: scale(1);
+    -webkit-animation: pulse 2.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+            animation: pulse 2.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  }
+  
+  .tile-top-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .tile-top-content span {
+    color: rgba(0, 0, 0, 0.64);
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .title-top-logo {
+    gap: 12px;
+  }
+  
+  .tile-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background: radial-gradient(circle at 8% 8%, #fdd696, #fcb747);
+    transition: all 0.2s ease-out;
+    color: rgba(0, 0, 0, 0.64);
+  }
+  .tile-bottom:hover {
+    cursor: pointer;
+    padding-right: 20px;
+    color: black;
+    background: radial-gradient(circle at 12% 12%, #fdd696, #fcb747);
+  }
+  .tile-bottom:hover .left {
+    text-decoration: underline;
+  }
+  
+  .right {
+    font-size: 20px;
+    font-weight: 350;
+  }
+  
+  @-webkit-keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 transparent;
+    }
+    50% {
+      transform: scale(1);
+      box-shadow: 0 0 0 8px #d1e8e0;
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 transparent;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 transparent;
+    }
+    50% {
+      transform: scale(1);
+      box-shadow: 0 0 0 8px #d1e8e0;
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 transparent;
+    }
+  }
+  @-webkit-keyframes heartBeat {
+    0% {
+      transform: scale(0.95);
+    }
+    14% {
+      transform: scale(1.3);
+    }
+    28% {
+      transform: scale(0.95);
+    }
+    42% {
+      transform: scale(1.3);
+    }
+    70% {
+      transform: scale(0.95);
+    }
+  }
+  @keyframes heartBeat {
+    0% {
+      transform: scale(0.95);
+    }
+    14% {
+      transform: scale(1.3);
+    }
+    28% {
+      transform: scale(0.95);
+    }
+    42% {
+      transform: scale(1.3);
+    }
+    70% {
+      transform: scale(0.95);
+    }
+  }
