@@ -60,37 +60,33 @@ const AddProperty = () => {
     <div class="tile-bottom">
     <form onSubmit={handleSubmit}>
     <label>
-      Title:
-      <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+      <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} />
     </label>
     <label>
-      Description:
-      <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
+      <input type="text" placeholder="Description"value={description} onChange={(e) => setDescription(e.target.value)} />
     </label>
     <label>
-      Price:
-      <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} />
+      <input type="number" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
     </label>
     <label>
-      Address:
-      <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
+      <input type="text" placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)} />
     </label>
     <label>
-      Zipcode:
-      <input type="number" value={zipcode} onChange={(e) => setZipcode(e.target.value)} />
+      <input type="number" placeholder="Zipcode" value={zipcode} onChange={(e) => setZipcode(e.target.value)} />
     </label>
     <label>
-      Beds:
+      Bed #:
+      <br></br>
       <input type="number" value={beds} onChange={(e) => setBeds(e.target.value)} />
     </label>
     <label>
-      Bath:
+      Bath #:
       <input type="number" value={bath} onChange={(e) => setBath(e.target.value)} />
     </label>
     <label>
-      Status:
-      <input type="text" value={status} onChange={(e) => setStatus(e.target.value)} />
+      <input type="text" placeholder="Status" value={status} onChange={(e) => setStatus(e.target.value)} />
     </label>
+    <br></br>
     <button type='submit'>Add Property</button>
   </form>
   </div>
