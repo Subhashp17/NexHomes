@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import './dashboardtiles.css'
+
+
+
+
 const UpdateDetails = ({ propertyId }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -9,7 +14,7 @@ const UpdateDetails = ({ propertyId }) => {
   const [beds, setBeds] = useState(0);
   const [bath, setBath] = useState(0);
   const [status, setStatus] = useState("");
-
+  let navigate = useNavigate();
   useEffect(() => {
     const fetchPropertyDetails = async () => {
       const token = localStorage.getItem('token');
@@ -60,9 +65,11 @@ const UpdateDetails = ({ propertyId }) => {
     const response = await fetch(`http://localhost:3002/property/${propertyId}`, requestOptions)
     const data = await response.json();
     console.log(data)
+    navigate("/dashboard");
   };
 
   return (
+
     <div class="grid">
   <div class="tile">
     <div class="tile-top flex-col">
@@ -79,7 +86,10 @@ const UpdateDetails = ({ propertyId }) => {
       </div>
     </div>
     <div class="tile-bottom"></div>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}/>
+
+    <form onSubmit={navigate("/dashboard")} >
+
   <label>
     Title:
     <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" />
