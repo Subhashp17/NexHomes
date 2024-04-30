@@ -1,5 +1,9 @@
 import React from 'react'
-import './Navbar.css'
+import './Navbar.css';
+import About from './About';
+import Services from './Services';
+import Contact from './Contact';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const Navbar = () => {
   const handleLogout = () =>{

@@ -6,6 +6,9 @@ import RegForm from './components/RegForm';
 import Dashboard from './components/Dashboard';
 import AddProperty from './components/AddProperty';
 import UpdateDetails from './components/updateDetails';
+import About from './components/About';
+import Services from './components/Services';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
         <Route path="/dashboard" element = {<Dashboard/>}/>
         <Route path="/addproperty" element = {<AddProperty/>}/>
         <Route path="/updateproperty" element = {<UpdateDetails/>}/>
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
         
       </Routes>
     </Router>
