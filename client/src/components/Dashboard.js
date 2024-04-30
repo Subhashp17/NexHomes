@@ -62,6 +62,22 @@ const Dashboard = () => {
   };
 
   return (
+    <div class="grid">
+  <div class="tile">
+    <div class="tile-top flex-col">
+      <div class="status"><svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 5.5C2.75736 6.86683 5.5 9 5.5 9C5.5 9 9.15685 4.12419 11.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+      <div class="badge"></div>
+      <div class="title-top-logo flex-row">
+        <div class="tile-top-content">
+          <h1>Property Listing</h1>
+          <span>Listed here</span>
+        </div>
+      </div>
+    </div>
+    <div class="tile-bottom"></div>
     <div>{
       localStorage.getItem('token') ?<>
     <Link to="/addproperty">Add property Here</Link>
@@ -76,6 +92,8 @@ const Dashboard = () => {
     <button onClick={() => handleDelete(item.title)}>Delete</button>
   </div>
 ))}</>: <h1>Please login to view this page<a href ='/'>LOGIN</a></h1>}
+  </div>
+  </div>
   </div>
   );
 };
