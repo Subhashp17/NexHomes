@@ -1,12 +1,20 @@
 import React from "react";
 import { useState } from "react";
+
 import './regform.css'
+
+import { useNavigate } from "react-router-dom";
+
+
+
 const Form = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email,setEmail] = useState("");
   const [isBuyer,setIsBuyer] = useState(false);
   const [isSeller, setIsSeller] = useState(false);
+
+  let navigate = useNavigate();
 
   const handleSubmit= async (e) =>{
     e.preventDefault();
@@ -21,7 +29,7 @@ const Form = () => {
     const response = await fetch('http://localhost:3002/register', requestOptions)
     const data = await response.json();
     console.log(data)
-
+    navigate("/");
   }
 
   return (

@@ -15,7 +15,7 @@ async function handleUserRegister(info) {
       },
     });
     if (exist) {
-      throw new Error("User Exists");
+       throw new Error("User Exists");
     }
     const newUser = await prisma.user.create({
       data: info,

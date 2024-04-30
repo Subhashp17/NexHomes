@@ -30,7 +30,7 @@ model User {
 
 model Properties{
   property_id String @id @default(uuid())
-  title String
+  title String @unique
   description String
   price Int
   Address String

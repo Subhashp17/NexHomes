@@ -4,10 +4,10 @@ const prisma = new PrismaClient();
 
 async function handleDeleteProperty(deleteProperty){
    
-  const {property_id} = deleteProperty
+  const {title} = deleteProperty
   const newProperty = await prisma.Properties.delete({
         where : {
-              property_id : deleteProperty.property_id
+              title: deleteProperty.title
         }
         
      });
